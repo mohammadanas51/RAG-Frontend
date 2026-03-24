@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #ffffff;
+    --text-main: #111111;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-border: rgba(212, 212, 212, 0.75);
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --accent-main: #a16207;
+    --accent-soft: rgba(161, 98, 7, 0.14);
+  }
+
+  .dark {
+    --bg-main: #121212;
+    --text-main: #ededed;
+    --card-bg: rgba(24, 24, 24, 0.82);
+    --card-border: rgba(63, 63, 63, 0.72);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --accent-main: #f59e0b;
+    --accent-soft: rgba(245, 158, 11, 0.14);
+  }
+
+  body {
+    @apply transition-colors duration-300 antialiased;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply border rounded-2xl transition-all duration-300 backdrop-blur-lg;
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: 0 18px 45px -22px var(--shadow-color), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .premium-gradient {
+    background: linear-gradient(135deg, #3a3a3a 0%, #242424 55%, #161616 100%);
+  }
+
+  .premium-button {
+    @apply text-white font-medium px-6 py-2.5 rounded-xl border border-neutral-600
+           transition-all duration-300 hover:opacity-95 hover:scale-[1.01]
+           active:scale-[0.98] disabled:opacity-50;
+    background: linear-gradient(160deg, #2f2f2f 0%, #242424 50%, #1b1b1b 100%);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .premium-input {
+    @apply bg-white dark:bg-[#1a1a1a] border border-neutral-300 dark:border-neutral-700
+           rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2
+           transition-all placeholder:text-neutral-500 dark:text-white;
+    --tw-ring-color: var(--accent-soft);
+  }
+
+  .premium-grid {
+    background-image:
+      linear-gradient(to right, rgba(140, 140, 140, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(140, 140, 140, 0.1) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: radial-gradient(circle at center, black 26%, transparent 86%);
+  }
+}
