@@ -14,7 +14,7 @@ function App() {
 
   const fetchDocuments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/documents");
+      const res = await axios.get("https://rag-backend-fjm7.onrender.com/api/documents");
       setDocuments(res.data);
     } catch (error) {
       console.error("Failed to fetch documents", error);
@@ -37,7 +37,7 @@ function App() {
     try {
       setViewerError("");
       setViewingDocId(doc._id);
-      const res = await axios.get(`http://localhost:5000/api/documents/${doc._id}`);
+      const res = await axios.get(`https://rag-backend-fjm7.onrender.com/api/documents/${doc._id}`);
       setSelectedDocument(res.data);
       setIsViewerOpen(true);
     } catch (error) {

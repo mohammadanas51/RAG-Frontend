@@ -12,7 +12,7 @@ function AskQuestion() {
     setLoading(true);
     setCreditError(false);
     try {
-      const response = await axios.post("http://localhost:5000/api/ask", { question });
+      const response = await axios.post("https://rag-backend-fjm7.onrender.com/api/ask", { question });
       setResult(response.data);
     } catch (error) {
       console.error("Failed to fetch answer", error);

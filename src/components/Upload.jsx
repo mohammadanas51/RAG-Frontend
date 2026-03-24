@@ -15,7 +15,7 @@ function Upload({ refreshDocuments }) {
     formData.append("file", file);
 
     try {
-      await axios.post("http://localhost:5000/api/upload", formData);
+      await axios.post("https://rag-backend-fjm7.onrender.com/api/upload", formData);
       setFile(null);
       refreshDocuments();
     } catch (error) {
