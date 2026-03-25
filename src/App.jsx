@@ -62,7 +62,7 @@ function App() {
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
-                NeuralQuery
+                DocuLens
               </h1>
               <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400">Private Knowledge Intelligence</p>
             </div>
@@ -129,7 +129,7 @@ function App() {
         </main>
 
         <footer className="mt-16 text-center text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">
-          <p>© {new Date().getFullYear()} NeuralQuery Intelligence Systems • Crafted for clarity and speed</p>
+          <p>© {new Date().getFullYear()} DocuLens Intelligence Systems • Crafted for clarity and speed</p>
         </footer>
       </div>
 
